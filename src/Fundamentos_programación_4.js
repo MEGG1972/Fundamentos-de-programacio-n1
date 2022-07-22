@@ -10,24 +10,21 @@ mejor si lo haces así.*/
 import {findMean} from './import_findMean.js';
 const MAX_NUMBER_OF_GAME = 6;
 const MIN_NUMBER_OF_GAME = 1;
-let dataManagement = 0;
-let arraySumManagement = [];
+//let dataManagement = 0;
+//let arraySumManagement = [];
 let rollDice1 = 0
 let rollDice2 = 0
-let array = arraySumManagement;
-let measuringArray = 0;
+//let array = arraySumManagement;
+//let measuringArray = 0;
+let array = [];
 for ( let i=0; i<=6000; i++){
     rollDice1 = Math.floor((Math.random() * MAX_NUMBER_OF_GAME - MIN_NUMBER_OF_GAME + 1) + MIN_NUMBER_OF_GAME);
     rollDice2 = Math.floor((Math.random() * MAX_NUMBER_OF_GAME - MIN_NUMBER_OF_GAME + 1) + MIN_NUMBER_OF_GAME);
 
-    dataManagement = rollDice1 + rollDice2
-    array.push(dataManagement);
-
-console.log(`Primer lanzamiento ${rollDice1}`);
-console.log(`Segundo lanzamiento ${rollDice2}`);
-console.log(`Suma de los dados ${dataManagement}`);
-
+   // dataManagement = rollDice1 + rollDice2
+   // array.push(dataManagement);
+    array.push(rollDice1+rollDice2);
 }
-console.log(`Suma de los totales en array ${arraySumManagement}`);
-console.log(findMean(arraySumManagement));
+console.log(`Suma de los totales en array ${array}`);
+console.log(findMean(array));
 

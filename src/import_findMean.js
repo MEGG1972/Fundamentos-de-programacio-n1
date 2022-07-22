@@ -1,9 +1,9 @@
 function findMean(array){
-    let measuringArray = 0;
-    for(let i=0; i<=array.lengh-1; i++){
-        array += array[i];
+    let sum = 0;
+    for(let i=0; i<=array.length-1; i++){
+        sum += array[i];
     }
-    return (measuringArray/array.lengh).toFixed(2);
+    return (sum/array.length).toFixed(2);
 }
 export {findMean};
 
